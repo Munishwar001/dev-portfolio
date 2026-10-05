@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, NotebookIcon } from "lucide-react";
+import { HomeIcon, MailIcon } from "lucide-react";
 import { ReactLight } from "@/components/ui/svgs/reactLight";
 import { NextjsIconDark } from "@/components/ui/svgs/nextjsIconDark";
 import { Typescript } from "@/components/ui/svgs/typescript";
@@ -21,7 +21,7 @@ export const DATA = {
   description:
     "Software Engineer building developer tools, AI products, and startups. Passionate about creating things people genuinely love to use.",
   summary:
-    "At the end of 2022, I quit my job as a software engineer to go fulltime into building and scaling my own SaaS businesses. In the past, [I pursued a double degree in computer science and business](/#education), [interned at big tech companies in Silicon Valley](https://www.youtube.com/watch?v=d-LJ2e5qKdE), and [competed in over 21 hackathons for fun](/#hackathons). I also had the pleasure of being a part of the first ever in-person cohort of buildspace called [buildspace sf1](https://buildspace.so/sf1).",
+    "I’m a **software engineer** who loves **building, experimenting, and learning by shipping**. From my early days of exploring web development to working professionally as a **full-stack engineer**, I’ve built applications, participated in **hackathons**, and explored ideas ranging from **real-time platforms** to **AI-powered products**. Today, I’m focused on **becoming a better engineer** while **building products that solve real problems**.",
   avatarUrl: "/me.png",
   skills: [
     { name: "React", icon: ReactLight },
@@ -38,10 +38,10 @@ export const DATA = {
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "/blog", icon: NotebookIcon, label: "Blog" },
+    { href: "mailto:kalramunishwar@gmail.com", icon: MailIcon, label: "Email" },
   ],
   contact: {
-    email: "hello@example.com",
+    email: "kalramunishwar@gmail.com",
     tel: "+123456789",
     social: {
       GitHub: {
@@ -58,17 +58,10 @@ export const DATA = {
 
         navbar: true,
       },
-      X: {
-        name: "X",
-        url: "https://dub.sh/dillion-twitter",
-        icon: Icons.x,
-
-        navbar: true,
-      },
-      Youtube: {
-        name: "Youtube",
-        url: "https://dub.sh/dillion-youtube",
-        icon: Icons.youtube,
+      LeetCode: {
+        name: "LeetCode",
+        url: "https://leetcode.com/",
+        icon: Icons.leetcode,
         navbar: true,
       },
       email: {
