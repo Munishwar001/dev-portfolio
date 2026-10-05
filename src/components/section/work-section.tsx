@@ -8,7 +8,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { DATA } from "@/data/resume";
-import { ChevronDown, ChevronRight } from "lucide-react";
+import { ArrowUpRight, ChevronDown, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 function LogoImage({ src, alt }: { src: string; alt: string }) {
@@ -33,10 +33,10 @@ function LogoImage({ src, alt }: { src: string; alt: string }) {
 export default function WorkSection() {
   return (
     <Accordion type="single" collapsible className="w-full grid gap-6">
-      {DATA.work.map((work) => (
+      {DATA.work.map((work, index) => (
         <AccordionItem
-          key={work.company}
-          value={work.company}
+          key={`${work.company}-${index}`}
+          value={`${work.company}-${index}`}
           className="w-full border-b-0 grid gap-2"
         >
           <AccordionTrigger className="hover:no-underline p-0 cursor-pointer transition-colors rounded-none group [&>svg]:hidden">
@@ -78,6 +78,17 @@ export default function WorkSection() {
           </AccordionTrigger>
           <AccordionContent className="p-0 ml-13 text-xs sm:text-sm text-muted-foreground">
             {work.description}
+            {work.href && (
+              <a
+                href={work.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2 flex w-fit items-center gap-1 text-blue-500 hover:underline underline-offset-4"
+              >
+                Visit {work.company}
+                <ArrowUpRight className="size-3.5" />
+              </a>
+            )}
           </AccordionContent>
         </AccordionItem>
       ))}

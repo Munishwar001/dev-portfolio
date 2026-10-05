@@ -4,13 +4,16 @@ import { ReactLight } from "@/components/ui/svgs/reactLight";
 import { NextjsIconDark } from "@/components/ui/svgs/nextjsIconDark";
 import { Typescript } from "@/components/ui/svgs/typescript";
 import { Nodejs } from "@/components/ui/svgs/nodejs";
-import { Python } from "@/components/ui/svgs/python";
-import { Golang } from "@/components/ui/svgs/golang";
 import { Postgresql } from "@/components/ui/svgs/postgresql";
 import { Docker } from "@/components/ui/svgs/docker";
 import { Kubernetes } from "@/components/ui/svgs/kubernetes";
 import { Java } from "@/components/ui/svgs/java";
 import { Csharp } from "@/components/ui/svgs/csharp";
+import { Angular } from "@/components/ui/svgs/angular";
+import { Dotnet } from "@/components/ui/svgs/dotnet";
+import { Mongodb } from "@/components/ui/svgs/mongodb";
+import { Redis } from "@/components/ui/svgs/redis";
+import { Git } from "@/components/ui/svgs/git";
 
 export const DATA = {
   name: "Munishwar Kalra",
@@ -27,14 +30,17 @@ export const DATA = {
     { name: "React", icon: ReactLight },
     { name: "Next.js", icon: NextjsIconDark },
     { name: "Typescript", icon: Typescript },
+    { name: "Angular", icon: Angular },
     { name: "Node.js", icon: Nodejs },
-    { name: "Python", icon: Python },
-    { name: "Go", icon: Golang },
+    { name: ".NET", icon: Dotnet },
     { name: "Postgres", icon: Postgresql },
+    { name: "MongoDB", icon: Mongodb },
+    { name: "Redis", icon: Redis },
     { name: "Docker", icon: Docker },
+    { name: "Git", icon: Git },
     { name: "Kubernetes", icon: Kubernetes },
     { name: "Java", icon: Java },
-    { name: "C++", icon: Csharp },
+    { name: "C#", icon: Csharp },
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
@@ -46,21 +52,21 @@ export const DATA = {
     social: {
       GitHub: {
         name: "GitHub",
-        url: "https://dub.sh/dillion-github",
+        url: "https://github.com/Munishwar001",
         icon: Icons.github,
         navbar: true,
       },
 
       LinkedIn: {
         name: "LinkedIn",
-        url: "https://dub.sh/dillion-linkedin",
+        url: "https://www.linkedin.com/in/munishwar-kalra-751641232/",
         icon: Icons.linkedin,
 
         navbar: true,
       },
       LeetCode: {
         name: "LeetCode",
-        url: "https://leetcode.com/",
+        url: "https://leetcode.com/u/kalramunishwar/",
         icon: Icons.leetcode,
         navbar: true,
       },
@@ -76,110 +82,64 @@ export const DATA = {
 
   work: [
     {
-      company: "Atomic Finance",
-      href: "https://atomic.finance",
+      company: "Wottacore Digital Solutions",
+      href: "https://wottacore.com",
       badges: [],
       location: "Remote",
-      title: "Bitcoin Protocol Engineer",
-      logoUrl: "/atomic.png",
-      start: "May 2021",
-      end: "Oct 2022",
+      title: "Full Stack Developer",
+      logoUrl: "/wottacore.png",
+      start: "Aug 2025",
+      end: "Present",
       description:
-        "Implemented the Bitcoin discreet log contract (DLC) protocol specifications as an open source Typescript SDK. Dockerized all microservices and setup production kubernetes cluster. Architected a data lake using AWS S3 and Athena for historical backtesting of bitcoin trading strategies. Built a mobile app using react native and typescript.",
+        "Working as a full-stack developer, building web applications with React, Angular, Node.js and .NET. Started working with AI, integrating third-party APIs into products, and sharpened my debugging skills. Handle client communication directly, turning requirements into reliable, working features.",
     },
     {
-      company: "Shopify",
+      company: "CodeQuotient Pvt. Ltd.",
+      href: "https://codequotient.com",
       badges: [],
-      href: "https://shopify.com",
-      location: "Remote",
-      title: "Software Engineer",
-      logoUrl: "/shopify.svg",
-      start: "January 2021",
-      end: "April 2021",
-      description:
-        "Implemented a custom Kubernetes controller in Go to automate the deployment of MySQL and ProxySQL custom resources in order to enable 2,000+ internal developers to instantly deploy their app databases to production. Wrote several scripts in Go to automate MySQL database failovers while maintaining master-slave replication topologies and keeping Zookeeper nodes consistent with changes.",
+      location: "Location",
+      title: "Software Engineering Intern",
+      logoUrl: "/codequotient.png",
+      start: "Feb 2025",
+      end: "Aug 2025",
+      description: "Deepened my full-stack skills by building applications with React and Node.js. Learned system design fundamentals and worked with databases, designing data models and APIs and writing cleaner, more scalable code.",
     },
     {
-      company: "Nvidia",
-      href: "https://nvidia.com/",
+      company: "CodeQuotient Pvt. Ltd.",
+      href: "https://codequotient.com",
       badges: [],
-      location: "Santa Clara, CA",
-      title: "Software Engineer",
-      logoUrl: "/nvidia.png",
-      start: "January 2020",
-      end: "April 2020",
-      description:
-        "Architected and wrote the entire MVP of the GeForce Now Cloud Gaming internal admin and A/B testing dashboard using React, Redux, TypeScript, and Python.",
-    },
-    {
-      company: "Splunk",
-      href: "https://splunk.com",
-      badges: [],
-      location: "San Jose, CA",
-      title: "Software Engineer",
-      logoUrl: "/splunk.svg",
-      start: "January 2019",
-      end: "April 2019",
-      description:
-        "Co-developed a prototype iOS app with another intern in Swift for the new Splunk Phantom security orchestration product (later publicly demoed and launched at .conf annual conference in Las Vegas). Implemented a realtime service for the iOS app in Django (Python) and C++; serialized data using protobufs transmitted over gRPC resulting in an approximate 500% increase in data throughput.",
-    },
-    {
-      company: "Lime",
-      href: "https://li.me/",
-      badges: [],
-      location: "San Francisco, CA",
-      title: "Software Engineer",
-      logoUrl: "/lime.svg",
-      start: "January 2018",
-      end: "April 2018",
-      description:
-        "Proposed and implemented an internal ruby API for sending/receiving commands to scooters over LTE networks. Developed a fully automated bike firmware update system to handle asynchronous firmware updates of over 100,000+ scooters worldwide, and provide progress reports in real-time using React, Ruby on Rails, PostgreSQL and AWS EC2 saving hundreds of developer hours.",
-    },
-    {
-      company: "Mitre Media",
-      href: "https://mitremedia.com/",
-      badges: [],
-      location: "Toronto, ON",
-      title: "Software Engineer",
-      logoUrl: "/mitremedia.png",
-      start: "May 2017",
-      end: "August 2017",
-      description:
-        "Designed and implemented a robust password encryption and browser cookie storage system in Ruby on Rails. Leveraged the Yahoo finance API to develop the dividend.com equity screener",
+      location: "Location",
+      title: "Software Engineering Intern",
+      logoUrl: "/codequotient.png",
+      start: "Jul 2024",
+      end: "Aug 2024",
+      description: "Introduced to professional web development. Learned the fundamentals of HTML, CSS and JavaScript and built my first backend services with Node.js, gaining hands-on experience building and shipping real features.",
     },
   ],
   education: [
     {
-      school: "Buildspace",
-      href: "https://buildspace.so",
-      degree: "s3, s4, sf1, s5",
-      logoUrl: "/buildspace.jpg",
+      school: "Kurukshetra University",
+      href: "https://kuk.ac.in",
+      degree: "BCA in Cloud Computing · 8.8 CGPA",
+      logoUrl: "/kuk.png",
       start: "2023",
-      end: "2024",
+      end: "2026",
     },
     {
-      school: "University of Waterloo",
-      href: "https://uwaterloo.ca",
-      degree: "Bachelor's Degree of Computer Science (BCS)",
-      logoUrl: "/waterloo.png",
-      start: "2016",
+      school: "Govt. Model Sanskriti Senior Secondary School",
+      href: "https://www.gmcampynr.in/",
+      degree: "Secondary Education · 81.4%",
+      logoUrl: "/gmsss.png",
+      start: "2022",
+      end: "2023",
+    },
+    {
+      school: "National Public School, Yamuna Nagar",
+      href: "https://www.nationalschool.edu.in/",
+      degree: "Primary Education · 74%",
+      logoUrl: "/nps.png",
+      start: "2020",
       end: "2021",
-    },
-    {
-      school: "Wilfrid Laurier University",
-      href: "https://wlu.ca",
-      degree: "Bachelor's Degree of Business Administration (BBA)",
-      logoUrl: "/laurier.png",
-      start: "2016",
-      end: "2021",
-    },
-    {
-      school: "International Baccalaureate",
-      href: "https://ibo.org",
-      degree: "IB Diploma",
-      logoUrl: "/ib.png",
-      start: "2012",
-      end: "2016",
     },
   ],
   projects: [
@@ -308,14 +268,13 @@ export const DATA = {
   ],
   hackathons: [
     {
-      title: "Hack Western 5",
-      dates: "November 23rd - 25th, 2018",
-      location: "London, Ontario",
+      title: "HackOctober 2026",
+      dates: "October 2nd - 3rd, 2026",
+      location: "",
       description:
-        "Developed a mobile application which delivered bedtime stories to children using augmented reality.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-western.png",
-      mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
+        "Built Complanx, a platform that finds the email address of any authority and sends the complaint to them on the user's behalf.",
+      image: "",
+      mlh: "",
       links: [],
     },
     {
