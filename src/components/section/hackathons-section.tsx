@@ -4,6 +4,8 @@ import Link from "next/link";
 import { DATA } from "@/data/resume";
 import { Timeline, TimelineItem, TimelineConnectItem } from "@/components/timeline";
 
+type HackathonLink = { title: string; href: string; icon?: React.ReactNode };
+
 export default function HackathonsSection() {
   return (
     <section id="hackathons" className="overflow-hidden">
@@ -12,21 +14,23 @@ export default function HackathonsSection() {
           <div className="flex items-center w-full">
             <div className="flex-1 h-px bg-linear-to-r from-transparent from-5% via-border via-95% to-transparent" />
             <div className="border bg-primary z-10 rounded-xl px-4 py-1">
-              <span className="text-background text-sm font-medium">Hackathons</span>
+              <span className="text-background text-sm font-medium">Hackathons &amp; Competitions</span>
             </div>
             <div className="flex-1 h-px bg-linear-to-l from-transparent from-5% via-border via-95% to-transparent" />
           </div>
           <div className="flex flex-col gap-y-3 items-center justify-center">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">I like building things</h2>
             <p className="text-muted-foreground md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed text-balance text-center">
-              During my time in university, I attended {DATA.hackathons.length}+
-              hackathons. People from around the country would come together and
-              build incredible things in 2-3 days. It was eye-opening to see the endless possibilities brought to life by a group of motivated and passionate individuals.
+              I enjoy building under pressure. These are the hackathons and
+              competitions where I&apos;ve built, learned and shipped real
+              projects with motivated people.
             </p>
           </div>
         </div>
         <Timeline>
-          {DATA.hackathons.map((hackathon) => (
+          {DATA.hackathons.map((hackathon) => {
+            const links: readonly HackathonLink[] = hackathon.links;
+            return (
             <TimelineItem key={hackathon.title + hackathon.dates} className="w-full flex items-start justify-between gap-10">
               <TimelineConnectItem className="flex items-start justify-center">
                 {hackathon.image ? (
@@ -54,9 +58,9 @@ export default function HackathonsSection() {
                     {hackathon.description}
                   </p>
                 )}
-                {hackathon.links && hackathon.links.length > 0 && (
+                {links.length > 0 && (
                   <div className="mt-1 flex flex-row flex-wrap items-start gap-2">
-                    {hackathon.links.map((link, idx) => (
+                    {links.map((link, idx) => (
                       <Link
                         href={link.href}
                         key={idx}
@@ -73,7 +77,8 @@ export default function HackathonsSection() {
                 )}
               </div>
             </TimelineItem>
-          ))}
+            );
+          })}
         </Timeline>
       </div>
     </section>
